@@ -1,0 +1,13 @@
+body {
+  font-family: serif;
+  background-color: yellow;
+    }
+.color{
+  color: blue;
+}
+.thin {
+  font-size: bold;
+}
+h1,p {
+color: navy blue;
+}
