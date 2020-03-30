@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript in the Web</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+<style media="screen">
+  html{
+    font-size:150%;
+  }
+  body,button,input ,select{
+    font-family: 'Oswald',sans-serif;
+  }
+  body {
+    margin : 80px 160px 0;
+  }
+  h1{
+    cursor: default;
+    user-select:none;
+  }
+  input, select {
+    padding: 14px;
+    padding-right: 320px;
+    border: 1px solid rgba(45,45,45,.3);
+    font-size: 32px;
+    height: 58px;
+    box-sizing: content-box;
+  }
+  .blue{color: blue;}
+  .violet{color: violet;}
+  .pink{color: pink;}
+</style>
+
+  </head>
+  <body>
+  <h1 id='header'>JavaScript in the WEB !!! </h1>
+  <form class="" action="" id='form' autocomplete="off" method="post">
+    <input type="text" placeholder="type here" id='textInput'>
+    <select id='dropdown'>
+            <option value='' hidden selected disabled>color</option>
+      <option value="blue">Blue</option>
+      <option value="violet">Violet</option>
+      <option value="pink">Pink</option>
+    </select>
+  </form>
+    <script type="text/javascript">
+      let header= document.getElementById('header');
+      let textInput= document.getElementById('textInput');
+      let dropdown= document.getElementById('dropdown');
+      textInput.addEventListener('input', function(){
+        let value = textInput.value;
+        header.innerHTML = value;
+        document.title =value;
+      })
+      dropdown.addEventListener('input',function(){
+        console.log(dropdown.value);
+        header.classList= "";
+        header.classList.add(dropdown.value);
+        })
+    </script>
+
+
+  </body>
+</html>

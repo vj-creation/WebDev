@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript in the Web</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+<style media="screen">
+  html{
+    font-size:150%;
+  }
+  body,button,input{
+    font-family: 'Oswald',sans-serif;
+  }
+  body {
+    margin : 80px 160px 0;
+  }
+  input{
+    font-size: 16px;
+    padding: 8px;
+    padding-right: 180px;;
+    border: none;
+
+  }
+  .purple{
+    color: purple;
+  }
+</style>
+  </head>
+  <body>
+
+
+  <input type="text" name="" value="" placeholder="input ...">
+  <h1 id='header'>JAVASCRIPT in the WEB</h1>
+  <h2>SUBHEADER. </h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <!-- *copy code from jquery cdn 3..  -->
+      <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous"></script>
+        <script type="text/javascript">
+          let element=$('h2');
+          console.log(element);
+            console.log(element.html());
+   //element.html('New Html'); will change the value of element
+    let everything=$('*').addClass('purple');
+    let currentHeaderFontSize =$('#header').css('font-size');
+    $('#header').css('font-size','70px');
+    $('input').keyup(function(){
+      $('h2').html($('input').val());
+    });
+$('input, h1,h2,p').each(function(i, value){
+  console.log(value.innerHTML);
+})
+
+
+        </script>
+
+        </body>
+        </html>

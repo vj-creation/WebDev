@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript in the Web</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+<style media="screen">
+  html{
+    font-size:150%;
+  }
+  body,button,input{
+    font-family: 'Oswald',sans-serif;
+  }
+  body {
+    margin : 80px 160px 0;
+  }
+  h1{
+    cursor: default;
+    user-select:none;
+  }
+  input{
+    padding: 14px;
+    padding-right: 320px;
+    border: 1px solid rgba(45,45,45,.3);
+    font-size 32px;
+  }
+</style>
+  </head>
+  <body>
+  <!--  <h1 id='main'>JavaScript in the WEB !!! </h1>
+
+    <h2 id='main'>JavaScript in the WEB !!! </h2> -->
+    <form autocomplete="off" id ='form' action="" method="post">
+      <input type="text" id='main' placeholder="TYPE HERE" value="" oninput="inputChanged();">
+
+    </form>
+    <script type="text/javascript">
+    //   let element=document.getElementById('main');
+    //   element.addEventListener('click',function(){
+    //     console.log('click!')
+    //   })
+    //   element.addEventListener('mouseover',function(){
+    //     console.log('hover')
+    //   })
+    //   element.addEventListener('mouseleave',function(){
+    //     console.log('unhover')
+    //   })
+    //   element.addEventListener('input',function(){
+    //     console.log('input aaya ');
+    //     inputChanged();
+    //   })
+    //
+    // //two ways of creating events: either directly by calling cuntion in the tab or by creating an event addEventListener.
+
+      //THE FORM WILL AUTOMATICALLY SUBMIT, IN ORDER TO PROMPT:
+      document.getElementById('form').addEventListener('submit', function(event){
+        let submit = confirm('are you sure you want to submit the form??');
+          if(!submit ){ return event.preventDefault(); }
+          console.log('form submitted..!');
+      });
+      function inputChanged(){
+        console.log('++++++++++');
+      }
+
+
+    </script>
+    <noscript>
+      THIS WEBSITE REQUIRES JAVASCRIPT. PLEASE ENABLE IT TO FUNCTION PROPERLY.
+    </noscript>
+  </body>
+</html>
